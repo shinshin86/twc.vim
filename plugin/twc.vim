@@ -1,3 +1,4 @@
+scriptencoding utf-8
 command! -nargs=? Twc call s:Twc(<f-args>)
 
 function! s:Twc(...)
