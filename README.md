@@ -48,5 +48,15 @@ your favorite color scheme 3
 
 ## Install
 
-TODO
+### dein.vim
 
+```toml
+[[plugins]] # twc
+repo = 'shinshin86/twc.vim'
+```
+
+### NeoBundle
+
+```vim
+NeoBundle 'shinshin86/twc.vim'
+```
