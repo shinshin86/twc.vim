@@ -16,42 +16,19 @@ loaded plugin then this command at vim!
 ```
 
 
-
-## Setting
-
-Please write your downloaded vim color scheme line by line.
-
-```bash
-#Setting Example:"
-touch $HOME/.twc_colors.vim"
-vim $HOME/.twc_colors.vim"
-```
-
-.twc_colors.vim
-
-```vim
-your favorite color scheme 1
-your favorite color scheme 2
-your favorite color scheme 3
-```
-
-``:Twc`` command
-
-```vim
-:Twc 0 "---> your favorite color scheme 1
-:Twc 1 "---> your favorite color scheme 2
-:Twc 2 "---> your favorite color scheme 3
-:Twc   "---> random select color scheme
-```
-
-
-
 ## Install
+Installation can be done in these ways.
+
+### vim-plug
+
+```vim
+Plug 'shinshin86/twc.vim'
+```
 
 ### dein.vim
 
 ```toml
-[[plugins]] # twc
+[[plugins]]
 repo = 'shinshin86/twc.vim'
 ```
 
@@ -60,3 +37,48 @@ repo = 'shinshin86/twc.vim'
 ```vim
 NeoBundle 'shinshin86/twc.vim'
 ```
+
+## Setting
+
+Add the following variables to your `.vimrc` file.  
+The array should be set to the color scheme to be used.
+
+```vim
+let g:twc_colors = ["blue", "darkblue", "default"]
+```
+
+### Using setting file.
+
+**If you have prepared a configuration file, this setting will take precedence.**
+
+It is also possible to create a separate configuration file.  
+Please write your vim color scheme line by line.
+
+```bash
+vim $HOME/.twc_colors.vim
+```
+
+`.twc_colors.vim`
+
+```vim
+blue
+darkblue
+default
+```
+
+`:Twc` command
+
+```vim
+:Twc 0 "---> blue
+:Twc 1 "---> darkblue
+:Twc 2 "---> default
+:Twc   "---> random select color scheme
+```
+
+## Licence
+
+[MIT](https://github.com/shinshin86/twc.vim/blob/master/LICENSE)
+
+## Author
+
+[Yuki Shindo](https://shinshin86.com/en)
